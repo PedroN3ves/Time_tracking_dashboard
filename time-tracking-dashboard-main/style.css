@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+/* ### Primary */
+
+--Blue: hsl(246, 80%, 60%);
+--Light-orange: hsl(15, 100%, 70%); /*work*/
+--Soft-blue: hsl(195, 74%, 62%); /*play*/
+--Light-red: hsl(348, 100%, 68%); /*study*/
+--Lime-green: hsl(145, 58%, 55%); /*exercise*/
+--Violet: hsl(264, 64%, 52%); /*social*/
+--Soft-orange: hsl(43, 84%, 65%); /*self care*/
+
+/* ### Neutral */
+
+--Very-dark-blue: hsl(226, 43%, 10%);
+--Dark-blue: hsl(235, 46%, 20%);
+--Desaturated-blue: hsl(235, 45%, 61%);
+--Pale-Blue: hsl(236, 100%, 87%);
+}
+
+html, body{
+    font-family: 'Rubik', sans-serif;
+
+    background-color: var(--Very-dark-blue);
+}
+
+p{
+    font-size: 18px;
+}
+
+.container{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+    grid-template-areas: 
+    'menu up up'
+    'menu down down';
+
+    height: 100vh;
+    width: 100vw;
+    min-width: 375px;
+    max-width: 1440px;
+}
+
+.main-card{
+    grid-area: menu;
+    height: 350px;
+    width: 200px;
+    border-radius: 10px;
+    
+    background-color: var(--Dark-blue);
+}
+
+.Jeremy{
+    background-color: var(--Blue);
+    border-radius: 10px;
+
+    height: 250px;
+    padding: 20px;
+}
+
+.title{
+    color: var(--Pale-Blue);
+
+    margin-top: 25px;
+}
+
+.Jeremy, .title p{
+    font-weight: 300;
+    font-size: 12px;
+}
+
+.Jeremy, .title span    {
+    font-size: 30px;
+    color: #fff;
+    /* word-break: break-all; */
+}
+
+.Jeremy-image img{
+    width: 3rem;
+    height: 3rem;
+    border: 2px solid #fff;
+    border-radius: 100%;
+}
+
+.period{
+    padding: 12px;
+}
+
+.period p{
+    color: var(--Pale-Blue);
+    font-size: 14px;
+    padding: 5px;
+}
+
+.up-info{
+    margin-top: 7.5rem;
+    grid-area: up;
+
+    display: flex;
+    flex-direction: row; 
+    gap: 10px;  
+}
+
+.work{
+    background-color: var(--Light-orange);
+    background-image: url(./images/icon-work.svg);
+        background-repeat: no-repeat;
+
+    border-radius: 10px;
+}
+
+.work-info{
+    background-color: var(--Dark-blue);
+
+    border-radius: 10px;
+}
+
+.title{
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hours{
+    color: #fff;
+}
+
+.hours span{
+    font-size: 12px;
+}
+
+.down-info{
+    grid-area: down;
+}
